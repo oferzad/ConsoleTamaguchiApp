@@ -42,7 +42,7 @@ namespace ConsoleTamaguchiApp.UI
                 string password = Console.ReadLine();
 
                 Task<PlayerDTO> t = UIMain.api.LoginAsync(email, password);
-                Console.WriteLine("Wait while logging in....");
+                Console.WriteLine("Wait while logging in.....");
                 t.Wait();
                 UIMain.CurrentPlayer = t.Result;
 
